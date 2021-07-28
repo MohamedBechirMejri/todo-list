@@ -13,7 +13,22 @@ body {
     width: 100%;
     height: 100%;
 }
-
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #37ca80;
+    color: aliceblue;
+}
+header button {
+    background-color: rgba(255, 255, 255, 0.26);
+    color: #fff;
+    font-size: larger;
+}
 #container {
     display: flex;
     width: 100%;
