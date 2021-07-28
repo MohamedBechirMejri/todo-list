@@ -4,6 +4,7 @@ body {
     width: 100vw;
     height: 100vh;
 }
+
 #wrapper {
     display: flex;
     flex-direction: column;
@@ -12,21 +13,33 @@ body {
     width: 100%;
     height: 100%;
 }
+
 #container {
     display: flex;
     width: 100%;
 }
+
 main {
     width: 70%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
+
 .obj {
     border-style: solid;
     border-radius: 0.5em;
     border-width: 0.1em;
 
     margin: 1em;
+    padding: 1em;
     display: flex;
     flex-direction: column;
+}
+
+button {
+    background-color: #37ca812f;
+    color: #37ca81;
+    border-radius: 0.5em;
+    border-style: none;
+    font-size: mall;
 }
