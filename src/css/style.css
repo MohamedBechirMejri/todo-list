@@ -35,11 +35,19 @@ main {
     display: flex;
     flex-direction: column;
 }
-
+.note-management {
+    width: 100%;
+    display: flex;
+}
 button {
     background-color: #37ca812f;
     color: #37ca81;
     border-radius: 0.5em;
     border-style: none;
-    font-size: mall;
+    font-size: small;
+    padding-top: 0.1em;
+    margin: 0.25em;
+}
+.date {
+    font-size: small;
 }
