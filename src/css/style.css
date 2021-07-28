@@ -16,3 +16,8 @@ body {
     display: flex;
     width: 100%;
 }
+main {
+    width: 70%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
