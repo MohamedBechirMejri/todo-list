@@ -2,7 +2,7 @@
 
 :root {
     --main-color: #ffffffe3;
-    --secondary-color: #0099ffdc;
+    --secondary-color: #006eff;
 }
 
 * {
@@ -28,4 +28,12 @@ header {
 
 nav {
     margin-top: 8.25em;
+}
+
+button {
+    border-style:none;
+    border-radius: 0.5em;
+    background-color: #006eff34;
+    color: #006eff;
+
 }
