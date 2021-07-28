@@ -21,3 +21,12 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
+.obj {
+    border-style: solid;
+    border-radius: 0.5em;
+    border-width: 0.1em;
+
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+}
