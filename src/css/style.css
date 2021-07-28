@@ -7,33 +7,47 @@
 
 * {
     font-family: "Fira Code", monospace;
-
     text-align: center;
+    transition: all 500ms;
 }
 
 body {
     margin: 0;
     padding: 0;
-    height: 100vh;
-    width: 100vw;
 }
 
 header {
-    background-color: var(--secondary-color);
+    /* background-color: var(--secondary-color); */
     position: fixed;
     top: 0;
     width: 100%;
-    padding-bottom: 1em;
+    height: 7em;
+    padding-bottom: 1em; 
 }
 
 nav {
-    margin-top: 8.25em;
+    position: fixed;
+    left: 1em;
 }
 
 button {
-    border-style:none;
+    border-style: none;
     border-radius: 0.5em;
-    background-color: #006eff34;
-    color: #006eff;
-
+    background-color: #00000034;
+    color: #000000;
 }
+
+main {
+    border-radius: 1em 1em 0 0;
+    margin: 8em auto auto 14em;
+}
+
+.obj {
+    border-style: solid;
+    border-width: 0.1em;
+    border-radius: 0.5em;
+    margin: 0.5em auto;
+    max-width: 35em;
+}
+
+footer {}
