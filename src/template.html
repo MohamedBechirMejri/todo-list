@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>BMinder</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-  </head>
 
-  <body>
-    <div id="wrapper">
-      <header>
-        <h1 id="title">BMinder</h1>
-      </header>
-      <div id="nav">
+    <head>
+        <meta charset="utf-8" />
+        <title>BMinder</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+
+    <body>
+        <div id="wrapper">
+            <header>
+                <h1 id="title">BMinder</h1>
+            </header>
+            <!--  <div id="nav">
         <div id="hamburger-button">h</div>
         <nav>
           <h2>Projects <button id="add-project">Add Project</button></h2>
-          <h3>
+      <h3>
             <a href="#">Test</a> <button class="remove-project">x</button>
           </h3>
         </nav>
-      </div>
-      <main> <!--
+      </div> -->
+            <main>
+                <!--
                     <button id="add-note">Add Note</button>
 
         <div class="note obj">
@@ -47,7 +49,7 @@
           </div>
         </div>
 
-        
+
         <div class="checkbox obj">
           <h4 class="note-title">checkbox</h4>
           <div>
@@ -71,16 +73,31 @@
           </div>
         </div>
         -->
-      </main>
 
-      <footer>
-        <p>
-          Developed by
-          <a href="https://github.com/MohamedBechirMejri" target="_blank"
-            >Mohamed Bechir</a
-          >.
-        </p>
-      </footer>
-    </div>
-  </body>
+                <div id="input">
+                    <div id="input-fields">
+                        <input class="newnote-title" />
+                        <input class="checkbox-item" />
+                        <textarea name="" id="newnote-body" cols="30" rows="10"></textarea>
+                    </div>
+                    <div id="newnote-management">
+                        <button>add checklist item</button>
+                        <button>description</button>
+                        <button>reminder</button>
+                        <button>color</button>
+                        <button>save</button>
+                        <button>cancel</button>
+                    </div>
+                </div>
+            </main>
+
+            <footer>
+                <p>
+                    Developed by
+                    <a href="https://github.com/MohamedBechirMejri" target="_blank">Mohamed Bechir</a>.
+                </p>
+            </footer>
+        </div>
+    </body>
+
 </html>
