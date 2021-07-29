@@ -25,7 +25,7 @@ header {
   padding-bottom: 1em;
 }
 
-nav {
+#nav {
   position: fixed;
   left: 1em;
 }
