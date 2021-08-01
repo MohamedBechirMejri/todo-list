@@ -1,8 +1,9 @@
 import "./css/style.css";
 
 import { NoteMaker } from "./js/NoteMaker";
+import { projects } from "./js/projects";
 
-console.log(NoteMaker('title', 'description', 'checkboxes', 'color', 'project', 'date'));
+
 /**
 
  *create a default array that stores the list of objects.
