@@ -23,3 +23,16 @@ export const generateProjectsList = (projects) => {
         navList.innerHTML += `<li class="nav-item"><a href="#" class="nav-link">${project}</a></li>`;
     });
 };
+
+export const addNewNote = () => {
+    const newNote = document.getElementById("new-note");
+
+    newNote.innerHTML = `<h2>New Note</h2>
+                    <input class="new-title" />
+                    <textarea class="new-description"></textarea>
+                    <input class="new-checkbox" />
+                    <label for="projects">Add To:</label>
+                    <select name="" id="projects">
+                        <option value="test">test</option>
+                    </select>`;
+}
