@@ -5,7 +5,7 @@ import { projects } from "./js/projects";
 import { generateProjectsList } from "./js/DOMStuff";
 
 projects.addToProject("test", { test: "" });
-console.log(generateProjectsList(projects));
+generateProjectsList(projects)
 /**
 
  *create a DOM manipulating function that adds project arrays to a sidebar
