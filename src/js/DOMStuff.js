@@ -28,11 +28,11 @@ export const addNewNote = () => {
     const newNote = document.getElementById("new-note");
 
     newNote.innerHTML = `<h2>New Note</h2>
-                    <input class="new-title" />
-                    <textarea class="new-description"></textarea>
-                    <input class="new-checkbox" />
-                    <label for="projects">Add To:</label>
-                    <select name="" id="projects">
-                        <option value="test">test</option>
-                    </select>`;
+            <input class="new-title" placeholder="Title"/>
+            <textarea class="new-description" placeholder="Description"></textarea>
+            <input class="new-checkbox" placeholder="Checklist Item"/>
+            <label for="projects">Add To:</label>
+            <select name="" id="projects">
+                <option value="test">test</option>
+            </select>`;
 }
