@@ -4,7 +4,6 @@ export const projects = {
             projects[project] = [];
         }
         projects[project].push(objToAdd);
-        console.log(projects);
     },
     returnProject: (project) => {
         return projects[project];
