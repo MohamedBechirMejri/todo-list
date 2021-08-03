@@ -31,8 +31,13 @@ export const generateProjectsList = (projects) => {
     });
 };
 
-export const addNewNote = () => {
+export const addNewNote = (projects) => {
     const newNote = document.getElementById("new-note");
+
+    let options = ``;
+    Object.keys(projects).forEach((project) => {
+        options += `<option value="${project}">${project}</option> `;
+    });
 
     newNote.innerHTML = `<h2>New Note</h2>
             <input id="new-title" placeholder="Title"/>
@@ -40,7 +45,7 @@ export const addNewNote = () => {
             <div id="checkboxes-div"></div>
             <label for="projects">Add To:</label>
             <select name="" id="projects">
-                <option value="test">test</option>
+                ${options}
             </select>
             <div id="date"></div>
             <div id="note-management">

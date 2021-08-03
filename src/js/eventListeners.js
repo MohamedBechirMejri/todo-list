@@ -10,7 +10,7 @@ import {
 
 export const listenToNewNoteButton = () => {
     const newNoteButton = document.getElementById("add-note");
-    newNoteButton.addEventListener("click", addNewNote);
+    newNoteButton.addEventListener("click", () => addNewNote(projects));
 };
 
 export const listenToSaveButton = (newNote) => {
