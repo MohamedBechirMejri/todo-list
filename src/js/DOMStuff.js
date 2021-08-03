@@ -34,5 +34,11 @@ export const addNewNote = () => {
             <label for="projects">Add To:</label>
             <select name="" id="projects">
                 <option value="test">test</option>
-            </select>`;
+            </select>
+            <div id="note-management">
+                <button class="" id="">Description</button>
+                <button class="" id="">schedule</button>
+                <button class="" id="">Add check item</button>
+                <button class="" id="">Save</button>
+            </div>`;
 }
