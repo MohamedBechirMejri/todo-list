@@ -1,11 +1,18 @@
-export const projects = {
-    addToProject: (project, objToAdd) => {
+export const projects = {};
+
+Object.defineProperty(Object.prototype, "addToProject", {
+    value: (project, objToAdd) => {
         if (!projects[project]) {
             projects[project] = [];
         }
         projects[project].push(objToAdd);
     },
-    returnProject: (project) => {
+    enumerable: false,
+});
+
+Object.defineProperty(Object.prototype, "returnProject", {
+    value: (project) => {
         return projects[project];
     },
-};
+    enumerable: false,
+});
