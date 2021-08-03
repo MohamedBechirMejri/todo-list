@@ -31,3 +31,14 @@ export const listenToSaveButton = (newNote) => {
         newNote.innerHTML = "";
     });
 };
+export const listenToDescriptionButton = () => {
+    const descriptionButton = document.getElementById("description-button");
+
+    descriptionButton.addEventListener("click", () => {
+        document.getElementById(
+            "description-div"
+        ).innerHTML = `<textarea id="new-description" placeholder="Description"></textarea>`;
+    }); //TODO: toggle textarea instead of just showing it once
+};
+// export const listenToScheduleButton = () => {};
+// export const listenToCheckboxButton = () => {};
