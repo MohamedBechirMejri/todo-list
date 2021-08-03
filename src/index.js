@@ -2,10 +2,23 @@ import "./css/style.css";
 
 import { NoteMaker } from "./js/NoteMaker";
 import { projects } from "./js/projects";
-import { generateProjectsList } from "./js/DOMStuff";
+import { generateProjectsList, generateNotes } from "./js/DOMStuff";
 
-projects.addToProject("test", { test: "" });
-generateProjectsList(projects)
+let test = NoteMaker(
+  "title",
+  "description",
+  ["checkbox 1", "checkbox 2", "checkbox 3", "checkbox 4"],
+  "color",
+  "project",
+  "date"
+);
+
+projects.addToProject("test", test);
+projects.addToProject("test", test);
+projects.addToProject("test3", test);
+
+generateProjectsList(projects);
+generateNotes(projects.test);
 /**
 
  *create a DOM manipulating function that adds project arrays to a sidebar

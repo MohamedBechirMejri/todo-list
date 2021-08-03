@@ -1,3 +1,21 @@
+export const generateNotes = (notes) => {
+    const notesDiv = document.getElementById("notes");
+    notesDiv.innerHTML = "";
+    notes.forEach((note) => {
+        let checkboxes = "";
+        note.checkboxes.forEach((checkbox) => {
+            checkboxes += `<h4 class="checkbox">${checkbox}</h4>`;
+        });
+
+        notesDiv.innerHTML += `<div class="note" style="background-color: ${note.color}">
+                        <h3 class="note-title">${note.title}</h3>
+                        <p class="description">${note.description}</p>
+                        <p class="date">${note.date}</p>
+                        ${checkboxes}
+                    </div>`;
+    });
+};
+
 export const generateProjectsList = (projects) => {
     const navList = document.getElementById("nav-list");
     navList.innerHTML = "";
