@@ -1,3 +1,7 @@
+import {
+    listenToSaveButton
+} from "./eventListeners";
+
 export const generateNotes = (notes) => {
     const notesDiv = document.getElementById("notes");
     notesDiv.innerHTML = "";
@@ -36,9 +40,10 @@ export const addNewNote = () => {
                 <option value="test">test</option>
             </select>
             <div id="note-management">
-                <button class="" id="">Description</button>
-                <button class="" id="">schedule</button>
-                <button class="" id="">Add check item</button>
-                <button class="" id="">Save</button>
+                <button class="" id="description-button">Description</button>
+                <button class="" id="schedule-button">schedule</button>
+                <button class="" id="add-check-item-button">Add check item</button>
+                <button class="" id="save-button">Save</button>
             </div>`;
-}
+    listenToSaveButton(newNote);
+};
