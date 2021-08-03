@@ -1,4 +1,4 @@
-import { listenToDescriptionButton, listenToSaveButton } from "./eventListeners";
+import { listenToCheckboxButton, listenToDescriptionButton, listenToSaveButton } from "./eventListeners";
 
 export const generateNotes = (notes) => {
   const notesDiv = document.getElementById("notes");
@@ -32,8 +32,7 @@ export const addNewNote = () => {
   newNote.innerHTML = `<h2>New Note</h2>
             <input id="new-title" placeholder="Title"/>
             <div id="description-div"></div>
-            <input class="new-checkbox" placeholder="Checklist Item"/>
-            <input class="new-checkbox" placeholder="Checklist Item"/>
+            <div id="checkboxes-div"></div>
             <label for="projects">Add To:</label>
             <select name="" id="projects">
                 <option value="test">test</option>
@@ -46,4 +45,5 @@ export const addNewNote = () => {
             </div>`;
     listenToSaveButton(newNote);
     listenToDescriptionButton()
+    listenToCheckboxButton()
 };
