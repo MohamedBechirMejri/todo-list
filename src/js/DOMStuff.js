@@ -32,8 +32,9 @@ export const addNewNote = () => {
     const newNote = document.getElementById("new-note");
 
     newNote.innerHTML = `<h2>New Note</h2>
-            <input class="new-title" placeholder="Title"/>
-            <textarea class="new-description" placeholder="Description"></textarea>
+            <input id="new-title" placeholder="Title"/>
+            <textarea id="new-description" placeholder="Description"></textarea>
+            <input class="new-checkbox" placeholder="Checklist Item"/>
             <input class="new-checkbox" placeholder="Checklist Item"/>
             <label for="projects">Add To:</label>
             <select name="" id="projects">

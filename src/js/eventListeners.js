@@ -4,25 +4,30 @@ import {
 import {
     NoteMaker
 } from "./NoteMaker";
+import {
+    projects
+} from "./projects";
 
 export const listenToNewNoteButton = () => {
     const newNoteButton = document.getElementById("add-note");
     newNoteButton.addEventListener("click", addNewNote);
-
 };
 
 export const listenToSaveButton = (newNote) => {
-  const saveButton = document.getElementById("save-button");
-  saveButton.addEventListener("click", () => {
-    console.log(
-      NoteMaker(
-        "title",
-        "description",
-        ["checkbox 1", "checkbox 2", "checkbox 3", "checkbox 4"],
-        "project",
-        "date"
-      )
-    );
-      newNote.innerHTML = ''
-  });
+    const saveButton = document.getElementById("save-button");
+    saveButton.addEventListener("click", () => {
+        const title = document.getElementById("new-title");
+        const description = document.getElementById("new-description");
+        const checkList = document.querySelectorAll(".new-checkbox");
+        const project = document.getElementById("projects");
+
+        let checkboxes = [];
+        checkList.forEach((checkbox) => checkboxes.push(checkbox.value));
+
+        projects.addToProject(
+            project.value,
+            NoteMaker(title.value, description.value, checkboxes, "date")
+        );
+        newNote.innerHTML = "";
+    });
 };
