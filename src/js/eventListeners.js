@@ -53,4 +53,18 @@ export const listenToCheckboxButton = () => {
         ).innerHTML += `<input class="new-checkbox" placeholder="Checklist Item"/>`;
     });
 };
-// export const listenToScheduleButton = () => {};
+export const listenToScheduleButton = () => {
+    const scheduleButton = document.getElementById("schedule-button");
+
+    scheduleButton.addEventListener("click", () => {
+        const getCurrentDate = () => {
+            return new Date().toJSON().substr(0, 16);
+        };
+
+        const dateDiv = document.getElementById("date");
+        dateDiv.innerHTML = `<label for="reminder">Choose a time for your reminder:</label>
+                <input type="datetime-local" id="reminder"
+                name="reminder" value="${getCurrentDate()}"
+                min="${getCurrentDate()}" max="2118-06-14T00:00">`;
+    });
+};
