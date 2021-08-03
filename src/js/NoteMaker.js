@@ -2,7 +2,6 @@ export const NoteMaker = (
     title,
     description,
     checkboxes,
-    color,
     project,
     date
 ) => {
@@ -10,7 +9,6 @@ export const NoteMaker = (
         title,
         description,
         checkboxes,
-        color,
         project,
         date
     };
