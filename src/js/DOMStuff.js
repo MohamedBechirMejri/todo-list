@@ -4,7 +4,7 @@ export const generateNotes = (notes) => {
     notes.forEach((note) => {
         let checkboxes = "";
         note.checkboxes.forEach((checkbox) => {
-            checkboxes += `<h4 class="checkbox">${checkbox}</h4>`;
+            checkboxes += `<h4 class="checkbox"><input id="${checkbox}" type="checkbox"><label for="${checkbox}">${checkbox}</label></h4>`;
         });
 
         notesDiv.innerHTML += `<div class="note" style="background-color: ${note.color}">
