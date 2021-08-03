@@ -20,6 +20,7 @@ export const listenToSaveButton = (newNote) => {
         const description = document.getElementById("new-description");
         const checkList = document.querySelectorAll(".new-checkbox");
         const project = document.getElementById("projects");
+        const reminder = document.getElementById("reminder");
 
         let checkboxes = [];
         checkList.forEach((checkbox) => checkboxes.push(checkbox.value));
@@ -30,7 +31,7 @@ export const listenToSaveButton = (newNote) => {
                 title.value,
                 description ? description.value : "",
                 checkboxes,
-                "date"
+                reminder ? reminder.value : ""
             )
         );
         newNote.innerHTML = "";
