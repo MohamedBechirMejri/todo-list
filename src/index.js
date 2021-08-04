@@ -4,7 +4,7 @@ import { NoteMaker } from "./js/NoteMaker";
 import { projects } from "./js/projects";
 import { generateProjectsList, generateNotes } from "./js/DOMStuff";
 import { listenToAddProjectButton, listenToNewNoteButton } from "./js/eventListeners";
-
+import { DOMStyling } from "./js/DOMStyling";
 listenToNewNoteButton()
 listenToAddProjectButton()
 /**
