@@ -8,6 +8,9 @@ import {
 export const generateNotes = (notes) => {
     const notesDiv = document.getElementById("notes");
     notesDiv.innerHTML = "";
+    if (!notes[0]) {
+        notes.shift();
+    }
     notes.forEach((note) => {
         let checkboxes = "";
         note.checkboxes.forEach((checkbox) => {
