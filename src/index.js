@@ -3,9 +3,10 @@ import "./css/style.css";
 import { NoteMaker } from "./js/NoteMaker";
 import { projects } from "./js/projects";
 import { generateProjectsList, generateNotes } from "./js/DOMStuff";
-import { listenToNewNoteButton } from "./js/eventListeners";
+import { listenToAddProjectButton, listenToNewNoteButton } from "./js/eventListeners";
 
 listenToNewNoteButton()
+listenToAddProjectButton()
 /**
 let test = NoteMaker(
   "title",

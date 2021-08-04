@@ -1,5 +1,5 @@
 import {
-    addNewNote
+    addNewNote, generateProjectsList
 } from "./DOMStuff";
 import {
     NoteMaker
@@ -67,5 +67,15 @@ export const listenToScheduleButton = () => {
                 <input type="datetime-local" id="reminder"
                 name="reminder" value="${getCurrentDate()}"
                 min="${getCurrentDate()}" max="2118-06-14T00:00">`;
+    });
+};
+
+export const listenToAddProjectButton = () => {
+    const addProjectButton = document.getElementById("add-project-button");
+    const newProjectInput = document.getElementById("add-project");
+
+    addProjectButton.addEventListener("click", () => {
+        projects.addToProject(newProjectInput.value);
+        generateProjectsList(projects);
     });
 };
