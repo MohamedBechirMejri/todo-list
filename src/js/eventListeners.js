@@ -37,7 +37,10 @@ export const listenToSaveButton = (newNote) => {
             )
         );
         newNote.innerHTML = "";
+        
+        generateNotes(projects.returnProject(project.value));
     });
+
 };
 export const listenToDescriptionButton = () => {
     const descriptionButton = document.getElementById("description-button");
