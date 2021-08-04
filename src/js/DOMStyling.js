@@ -3,10 +3,15 @@ export const DOMStyling = (() => {
 
     navToggle.addEventListener("click", () => {
         const gapDiv = document.getElementById("gap");
-        if (gapDiv.style.height !== '0em') {
-            gapDiv.style.height = '0em';
-        } else {
-            gapDiv.style.height = "7.5em";
-        }
+        gapDiv.style.height !== "0em" ?
+            (gapDiv.style.height = "0em") :
+            (gapDiv.style.height = "7.5em");
+
+        const navListItems = document.querySelectorAll("li");
+        navListItems.forEach((item) => {
+            item.style.height !== "0em" ?
+                (item.style.height = "0em") :
+                (item.style.height = "1em");
+        });
     });
 })();
