@@ -37,7 +37,7 @@ export const listenToSaveButton = (newNote) => {
             )
         );
         newNote.innerHTML = "";
-        
+
         generateNotes(projects.returnProject(project.value));
     });
 
@@ -89,6 +89,7 @@ export const listenToAddProjectButton = () => {
 
     addProjectButton.addEventListener("click", () => {
         projects.addToProject(newProjectInput.value);
+        newProjectInput.value = ''
         generateProjectsList(projects);
         listenToProjectTitleButtons(projects);
     });
