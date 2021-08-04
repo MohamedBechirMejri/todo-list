@@ -1,5 +1,7 @@
 import {
-    addNewNote, generateProjectsList
+    addNewNote,
+    generateNotes,
+    generateProjectsList
 } from "./DOMStuff";
 import {
     NoteMaker
@@ -69,7 +71,15 @@ export const listenToScheduleButton = () => {
                 min="${getCurrentDate()}" max="2118-06-14T00:00">`;
     });
 };
+export const listenToProjectTitleButtons = () => {
+    const projectTitleButtons = document.querySelectorAll(".nav-link");
 
+    projectTitleButtons.forEach((project) => {
+        project.addEventListener("click", () => {
+            generateNotes(projects.returnProject(project.innerText));
+        });
+    });
+};
 export const listenToAddProjectButton = () => {
     const addProjectButton = document.getElementById("add-project-button");
     const newProjectInput = document.getElementById("add-project");
@@ -77,5 +87,6 @@ export const listenToAddProjectButton = () => {
     addProjectButton.addEventListener("click", () => {
         projects.addToProject(newProjectInput.value);
         generateProjectsList(projects);
+        listenToProjectTitleButtons(projects);
     });
 };
