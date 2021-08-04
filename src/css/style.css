@@ -1,9 +1,13 @@
+@import url(https://fonts.googleapis.com/css2?family=Fira+Code:wght@100;200;300;400;500;600;700&display=swap);
+
 *,
 *::before,
 *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    text-align: center;
+    font-family: "Fira Code", monospace;
 }
 
 :root {
@@ -15,6 +19,30 @@
 }
 
 body {
-    height: 100vh;
     width: 100vw;
+    height: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    background-color: var(--clr-primary);
+    width: 100%;
+    padding: 1.25em;
+    position: fixed;
+    top: 0;
+}
+
+#gap {
+    height: 7.5em;
 }
