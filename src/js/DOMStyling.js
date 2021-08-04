@@ -5,13 +5,13 @@ export const DOMStyling = (() => {
         const gapDiv = document.getElementById("gap");
         gapDiv.style.height !== "0em" ?
             (gapDiv.style.height = "0em") :
-            (gapDiv.style.height = "7.5em");
+            (gapDiv.style.height = "6.5em");
 
         const navListItems = document.querySelectorAll("li");
         navListItems.forEach((item) => {
             item.style.height !== "0em" ?
                 (item.style.height = "0em") :
-                (item.style.height = "1em");
+                (item.style.height = "2em");
         });
     });
 })();
