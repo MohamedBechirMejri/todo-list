@@ -23,12 +23,9 @@ body {
     width: 100vw;
     height: 100%;
     min-height: 100%;
-    overflow-x: hidden;
-    overflow-y: hidden;
 }
 
 #wrapper {
-    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -76,7 +73,7 @@ h1 {
 
 .hamburger::before,
 .hamburger::after {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
 }
@@ -88,10 +85,6 @@ h1 {
 .hamburger::after {
     top: 6px;
 }
-
-
-
-
 
 #gap {
     height: 6.5em;
@@ -150,9 +143,12 @@ input:active {
     box-shadow: 0 0 0 0.2em;
     transition: all 200ms;
 }
+
 main {
     width: 100%;
+    background-color: var(--clr-dark);
 }
+
 #add-note {
     margin: 1em;
     padding: 0.5em 1.5em;
@@ -161,7 +157,23 @@ main {
     border-style: none;
     border-radius: 0.25em;
 }
+
 .plus {
     color: var(--clr-light);
     font-weight: bolder;
+}
+
+#new-note {
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--clr-light);
+}
+
+#new-note > * {
+    margin: 0.05em;
+    padding: 0.25em;
 }
