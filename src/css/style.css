@@ -13,14 +13,15 @@
 
 :root {
     --clr-primary: #ee6352;
-    --clr-dark: #333;
+    --clr-dark: rgb(87, 87, 87);
     --clr-neutral: #ddd;
     --clr-light: #fff;
     --cubic-bezier: cubic-bezier(0.75, -0.5, 0.21, 1.5);
 }
-body{
+
+body {
     width: 100vw;
-    background-color: #333;
+    background-color: var(--clr-dark);
 }
 
 #wrapper {
@@ -120,21 +121,23 @@ select {
     font-size: medium;
     font-weight: bolder;
     border-style: none;
-    border-radius: 0.14em;
+    border-radius: 0.25em;
     outline: none;
     width: 100%;
+    background-color: #ee645246;
+    color: var(--clr-primary);
 }
 
 input:active {
-    box-shadow: 0 0 0 0.2em red;
+    box-shadow: 0 0 0 0.2em #ee6352;
 }
 
 #add-project-button {
     border-style: none;
-    border-radius: 0.14em;
+    border-radius: 0.25em;
     padding: 0.75em;
     margin-left: 1em;
-    background-color: #ee635238;
+    background-color: rgba(255, 255, 255, 0.712);
     color: var(--clr-primary);
     transition: all 150ms;
 }
@@ -175,6 +178,13 @@ main {
 #new-note>* {
     margin-top: 0.25em;
     /* padding-top: 0.25em; */
+}
+h2 {
+    margin: 1em;
+}
+#new-note input {
+    height: 2em;
+    margin-bottom: 0.5em;
 }
 
 #note-management {
