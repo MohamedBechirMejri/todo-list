@@ -18,11 +18,9 @@
     --clr-light: #fff;
     --cubic-bezier: cubic-bezier(0.75, -0.5, 0.21, 1.5);
 }
-
-body {
+body{
     width: 100vw;
-    height: 100%;
-    min-height: 100%;
+    background-color: #333;
 }
 
 #wrapper {
@@ -117,12 +115,14 @@ nav {
 }
 
 input,
-textarea {
+textarea,
+select {
     font-size: medium;
     font-weight: bolder;
     border-style: none;
     border-radius: 0.14em;
     outline: none;
+    width: 100%;
 }
 
 input:active {
@@ -168,12 +168,29 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-
+    align-items: stretch;
     color: var(--clr-light);
 }
 
-#new-note > * {
-    margin: 0.05em;
-    padding: 0.25em;
+#new-note>* {
+    margin-top: 0.25em;
+    /* padding-top: 0.25em; */
+}
+
+#note-management {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+}
+
+#note-management button {
+    background-color: var(--clr-light);
+    border-style: none;
+    border-radius: 0.5em;
+    margin: 0.25em;
+    padding: 0.15em;
+    height: 3em;
+    width: 7em;
 }
