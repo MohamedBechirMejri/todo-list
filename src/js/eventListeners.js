@@ -54,9 +54,10 @@ export const listenToDescriptionButton = () => {
 export const listenToCheckboxButton = () => {
     const checkboxButton = document.getElementById("add-check-item-button");
     checkboxButton.addEventListener("click", () => {
-        document.getElementById(
-            "checkboxes-div"
-        ).innerHTML += `<input class="new-checkbox" placeholder="Checklist Item"/>`;
+        const childItem = document.createElement("input");
+        childItem.classList.add("new-checkbox");
+        childItem.setAttribute("placeholder", "Checklist Item");
+        document.getElementById("checkboxes-div").appendChild(childItem);
     });
 };
 export const listenToScheduleButton = () => {

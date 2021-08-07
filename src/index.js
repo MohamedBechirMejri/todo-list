@@ -45,7 +45,7 @@ generateNotes(projects.test);
 
  *
  *
- *fix checkboxes disappearing when adding new checkbox
+ *
  *change date format
  *save arrays in localStorage
  *on page load see if there are any arrays stored in localStorage and generate them
