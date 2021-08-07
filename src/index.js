@@ -6,7 +6,9 @@ import {
   listenToAddProjectButton,
   listenToNewNoteButton,
 } from "./js/eventListeners";
+import { checkLocalStorage } from "./js/localStorage";
 
+checkLocalStorage();
 generateProjectsList(projects);
 listenToNewNoteButton();
 listenToAddProjectButton();
