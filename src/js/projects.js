@@ -21,8 +21,8 @@ Object.defineProperty(Object.prototype, "returnProject", {
 
 Object.defineProperty(Object.prototype, "removeFromProject", {
   value: (project, titleOfObjToRemove) => {
-    projects[project] = projects[project].filter(() => {
-      return titleOfObjToRemove === projects[project][0];
+        projects[project] = projects[project].filter((obj) => {
+      return titleOfObjToRemove !== obj.title;
     });
   },
   enumerable: false,
