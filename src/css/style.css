@@ -211,6 +211,25 @@ h2 {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    width: 90%;
+    margin: auto;
+    border-style: solid;
+    border-radius: 0.25em;
+}
+
+.note-title {
+    font-size: 1.5em;
+    margin: 0.75em;
+}
+
+.description {
+    font-size: 1.5em;
+    margin-bottom: 0.75em;
+}
+
+.date {
+    position: relative;
+    top: 0;
 }
 
 .checkbox {
