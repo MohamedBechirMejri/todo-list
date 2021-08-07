@@ -107,6 +107,7 @@ nav {
 
 .nav-link {
     color: var(--clr-dark);
+    text-decoration: none;
 }
 
 #new-project-div {
@@ -114,6 +115,7 @@ nav {
     justify-content: center;
     align-items: stretch;
 }
+
 .delete-project-button {
     background-color: var(--clr-light);
     color: var(--clr-dark);
@@ -126,6 +128,7 @@ nav {
     font-size: small;
     margin-left: 1em;
 }
+
 input,
 textarea,
 select {
