@@ -1,52 +1,17 @@
 import "./css/style.css";
-
+import "./js/DOMStyling";
+import { projects } from "./js/projects";
+import { generateProjectsList } from "./js/DOMStuff";
 import {
-    NoteMaker
-} from "./js/NoteMaker";
-import {
-    projects
-} from "./js/projects";
-import {
-    generateProjectsList,
-    generateNotes
-} from "./js/DOMStuff";
-import {
-    listenToAddProjectButton,
-    listenToNewNoteButton,
+  listenToAddProjectButton,
+  listenToNewNoteButton,
 } from "./js/eventListeners";
-import {
-    DOMStyling
-} from "./js/DOMStyling";
 
 generateProjectsList(projects);
 listenToNewNoteButton();
 listenToAddProjectButton();
+
 /**
-let test = NoteMaker(
-  "title",
-  "description",
-  ["checkbox 1", "checkbox 2", "checkbox 3", "checkbox 4"],
-  "project",
-  "date"
-);
-
-projects.addToProject("test", test);
-projects.addToProject("test", test);
-projects.addToProject("test3", test);
-
-generateProjectsList(projects);
-generateNotes(projects.test);
-
-
-
-
-
-
-
- *
- *
- *
- *change date format
  *save arrays in localStorage
  *on page load see if there are any arrays stored in localStorage and generate them
  * TODO: add ids to notes
