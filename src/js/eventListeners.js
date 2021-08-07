@@ -33,7 +33,8 @@ export const listenToSaveButton = (newNote) => {
                 title.value,
                 description ? description.value : "",
                 checkboxes,
-                reminder ? reminder.value : ""
+                reminder ? reminder.value : "",
+                project.value
             )
         );
         newNote.innerHTML = "";
@@ -97,11 +98,9 @@ export const listenToNoteDeleteButtons = () => {
     const noteDeleteButtons = document.querySelectorAll(".delete-note-button");
     noteDeleteButtons.forEach((button) => {
         button.addEventListener("click", () => {
-            projects.removeFromProject(
-                "Default", // <== just for now
-                button.value
-            );
-            generateNotes(projects["Default"]); // <== Also for now
+            let split = button.value.split(",");
+            projects.removeFromProject(split[1], split[0]);
+            generateNotes(projects[split[1]]);
         });
     });
 };
