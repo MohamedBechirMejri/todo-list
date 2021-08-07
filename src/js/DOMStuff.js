@@ -18,12 +18,12 @@ export const generateNotes = (notes) => {
         note.checkboxes.forEach((checkbox) => {
             checkboxes += `<h4 class="checkbox"><input id="${checkbox}" type="checkbox"><label for="${checkbox}">${checkbox}</label></h4>`;
         });
-
+        let formattedDate = note.date;
         notesDiv.innerHTML += `
                             <div class="note">
                                 <h3 class="note-title">${note.title}</h3>
                                 <p class="description">${note.description}</p>
-                                <p class="date">${note.date}</p>
+                                <p class="date">${formattedDate}</p>
                                 ${checkboxes}
                                 <div class="manage-button">
                                 <button class="delete-note-button" value="${note.title},${note.project}">X</button></div>
@@ -68,4 +68,9 @@ export const addNewNote = (projects) => {
     listenToDescriptionButton();
     listenToCheckboxButton();
     listenToScheduleButton();
+};
+
+export const formatDate = (date) => {
+    let dateTime = date.split("T");
+
 };
