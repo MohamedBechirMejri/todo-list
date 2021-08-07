@@ -16,12 +16,11 @@
     --clr-dark: #000;
     --clr-neutral: #ddd;
     --clr-light: #fff;
-    --cubic-bezier: cubic-bezier(0.75, -0.5, 0.21, 1.5);
 }
 
 body {
     width: 100vw;
-    background-color: var(--clr-dark);
+/*    background-color: var(--clr-dark);*/
 }
 
 #wrapper {
@@ -33,7 +32,8 @@ body {
 }
 
 header {
-    background-color: var(--clr-primary);
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
     width: 100%;
     padding: 1.25em;
     position: fixed;
@@ -45,7 +45,7 @@ h1 {
 }
 
 #nav-toggle {
-    background-color: var(--clr-dark);
+    background-color: var(--clr-light);
     border-style: none;
     border-radius: 0.15em;
     margin-top: 0.65em;
@@ -90,8 +90,8 @@ h1 {
 }
 
 nav {
-    background-color: var(--clr-dark);
-    color: var(--clr-light);
+    background-color: var(--clr-light);
+    color: var(--clr-dark);
     width: 100%;
     padding: 1em;
 }
@@ -106,7 +106,7 @@ nav {
 }
 
 .nav-link {
-    color: var(--clr-light);
+    color: var(--clr-dark);
 }
 
 #new-project-div {
@@ -124,15 +124,15 @@ select {
     border-radius: 0.25em;
     outline: none;
     width: 100%;
-    background-color: #ee645236;
-    color: var(--clr-primary);
+    background-color: var(--clr-neutral);
+    color: var(--clr-dark);
 }
 ::placeholder {
-    color: var(--clr-primary);
+    color: var(--clr-dark);
     opacity: 0.75;
 }
 input:active {
-    box-shadow: 0 0 0 0.2em #ee6352;
+    box-shadow: 0 0 0 0.2em var(--clr-dark);
 }
 
 #add-project-button {
@@ -140,8 +140,8 @@ input:active {
     border-radius: 0.25em;
     padding: 0.75em;
     margin-left: 1em;
-    color: var(--clr-dark);
-    background-color: var(--clr-primary);
+    color: var(--clr-light);
+    background-color: var(--clr-dark);
     font-weight: 900;
     transition: all 150ms;
 }
@@ -153,14 +153,14 @@ input:active {
 
 main {
     width: 100%;
-    background-color: var(--clr-dark);
+    background-color: var(--clr-light);
 }
 
 #add-note {
     margin: 1em;
     padding: 0.5em 1.5em;
     font-size: larger;
-    background-color: var(--clr-primary);
+    background-color: var(--clr-dark);
     border-style: none;
     border-radius: 0.25em;
 }
@@ -221,8 +221,8 @@ h2 {
     border-radius: 0.25em;
     position: relative;
     padding: 1.5em;
-    background-color: black;
-    color: var(--clr-primary);
+    background-color: var(--clr-light);
+    color: var(--clr-dark);
     margin-top: 2em;
 }
 
@@ -240,11 +240,11 @@ h2 {
     position: absolute;
     top: 95%;
     right: 1em;
-    background-color: rgb(0 0 0);
+    background-color: var(--clr-light);
     border-style: solid;
     border-radius: inherit;
     border-width: inherit;
-    border-color: var(--clr-primary);
+    border-color: var(--clr-dark);
     padding: 0.2em;
 }
 
@@ -263,5 +263,5 @@ h2 {
 
 .checkbox input:active,
 :checked {
-    background-color: #ee6352;
+    background-color: var(--clr-dark);
 }
