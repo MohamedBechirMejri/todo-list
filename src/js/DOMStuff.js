@@ -18,7 +18,7 @@ export const generateNotes = (notes) => {
         note.checkboxes.forEach((checkbox) => {
             checkboxes += `<h4 class="checkbox"><input id="${checkbox}" type="checkbox"><label for="${checkbox}">${checkbox}</label></h4>`;
         });
-        let formattedDate = note.date;
+        let formattedDate = formatDate(note.date);
         notesDiv.innerHTML += `
                             <div class="note">
                                 <h3 class="note-title">${note.title}</h3>
@@ -73,29 +73,39 @@ export const addNewNote = (projects) => {
 export const formatDate = (date) => {
     let dateTime = date.split("T");
     let yearMonthDay = dateTime[0].split("-");
-    let hoursMinutes = dateTime[1].split(":");
-
+    let hoursMinutes = dateTime[1];
+    //2118-06-14T00:00
     const days = [
-      "Sunday",
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
     ];
     const months = [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December",
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
     ];
+
+    let day = new Date(
+        `${months[yearMonthDay[1].charAt(1)]} ${yearMonthDay[2]}, ${
+      yearMonthDay[0]
+    } ${hoursMinutes}:00`
+    ).getDay();
+
+    return `${days[day]}, ${months[yearMonthDay[1].charAt(1)]} ${
+    yearMonthDay[1]
+  }th ${yearMonthDay[0]} at ${hoursMinutes}`;
 };
