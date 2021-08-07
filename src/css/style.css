@@ -228,6 +228,7 @@ h2 {
     background-color: var(--clr-light);
     color: var(--clr-dark);
     margin-top: 2em;
+    border-width: thin;
 }
 
 .note-title {
@@ -267,4 +268,19 @@ h2 {
 .checkbox input:active,
 :checked {
     background-color: var(--clr-dark);
+}
+
+.delete-note-button {
+    background-color: var(--clr-light);
+    color: var(--clr-dark);
+    border-color: var(--clr-dark);
+    border-style: solid;
+    border-width: thin;
+    border-radius: 50%;
+    width: 2em;
+    height: 2em;
+    font-size: small;
+    position: absolute;
+    right: -1em;
+    top: -1em;
 }
