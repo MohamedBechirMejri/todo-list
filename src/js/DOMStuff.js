@@ -72,5 +72,6 @@ export const addNewNote = (projects) => {
 
 export const formatDate = (date) => {
     let dateTime = date.split("T");
+    let yearMonthDay = dateTime[0].split("-");
 
 };
