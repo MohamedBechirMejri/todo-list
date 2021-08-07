@@ -75,5 +75,14 @@ export const formatDate = (date) => {
     let yearMonthDay = dateTime[0].split("-");
     let hoursMinutes = dateTime[1].split(":");
 
+    const days = [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ];
 
 };
