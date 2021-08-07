@@ -13,7 +13,7 @@
 
 :root {
     --clr-primary: #ee6352;
-    --clr-dark: rgb(87, 87, 87);
+    --clr-dark: #000;
     --clr-neutral: #ddd;
     --clr-light: #fff;
     --cubic-bezier: cubic-bezier(0.75, -0.5, 0.21, 1.5);
@@ -45,11 +45,11 @@ h1 {
 }
 
 #nav-toggle {
-    background-color: var(--clr-light);
+    background-color: var(--clr-dark);
     border-style: none;
     border-radius: 0.15em;
     margin-top: 0.65em;
-    padding: 0.5em;
+    padding: 0.75em;
 
     height: 2em;
     width: 3em;
@@ -124,10 +124,13 @@ select {
     border-radius: 0.25em;
     outline: none;
     width: 100%;
-    background-color: #ee645246;
+    background-color: #ee645236;
     color: var(--clr-primary);
 }
-
+::placeholder {
+    color: var(--clr-primary);
+    opacity: 0.75;
+}
 input:active {
     box-shadow: 0 0 0 0.2em #ee6352;
 }
@@ -137,8 +140,9 @@ input:active {
     border-radius: 0.25em;
     padding: 0.75em;
     margin-left: 1em;
-    background-color: rgba(255, 255, 255, 0.712);
-    color: var(--clr-primary);
+    color: var(--clr-dark);
+    background-color: var(--clr-primary);
+    font-weight: 900;
     transition: all 150ms;
 }
 
