@@ -215,6 +215,8 @@ h2 {
     margin: auto;
     border-style: solid;
     border-radius: 0.25em;
+    position: relative;
+    padding: 1em;
 }
 
 .note-title {
@@ -228,8 +230,11 @@ h2 {
 }
 
 .date {
-    position: relative;
-    top: 0;
+    position: absolute;
+    top: 96%;
+    right: 1em;
+    background-color: var(--clr-dark);
+    padding: 0.1em;
 }
 
 .checkbox {
