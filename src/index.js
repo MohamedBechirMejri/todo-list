@@ -44,7 +44,7 @@ generateNotes(projects.test);
 
 
  *
- *add delete button (projects and notes)
+ *
  *fix checkboxes disappearing when adding new checkbox
  *change date format
  *save arrays in localStorage

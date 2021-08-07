@@ -104,3 +104,14 @@ export const listenToNoteDeleteButtons = () => {
         });
     });
 };
+export const listenToProjectDeleteButtons = () => {
+    const projectDeleteButtons = document.querySelectorAll(
+        ".delete-project-button"
+    );
+    projectDeleteButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            projects.removeProject(button.value);
+            generateProjectsList(projects);
+        });
+    });
+};

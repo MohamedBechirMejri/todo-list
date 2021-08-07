@@ -2,6 +2,7 @@ import {
     listenToCheckboxButton,
     listenToDescriptionButton,
     listenToNoteDeleteButtons,
+    listenToProjectDeleteButtons,
     listenToSaveButton,
     listenToScheduleButton,
 } from "./eventListeners";
@@ -28,7 +29,7 @@ export const generateNotes = (notes) => {
                                 <button class="delete-note-button" value="${note.title},${note.project}">X</button></div>
                             </div>`;
     });
-    listenToNoteDeleteButtons()
+    listenToNoteDeleteButtons();
 };
 
 export const generateProjectsList = (projects) => {
@@ -37,6 +38,7 @@ export const generateProjectsList = (projects) => {
     Object.keys(projects).forEach((project) => {
         navList.innerHTML += `<li class="nav-item"><a href="#" class="nav-link">${project}</a><button class="delete-project-button" value="${project}">X</button></li>`;
     });
+    listenToProjectDeleteButtons();
 };
 
 export const addNewNote = (projects) => {
