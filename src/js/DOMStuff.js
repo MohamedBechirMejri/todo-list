@@ -17,12 +17,15 @@ export const generateNotes = (notes) => {
             checkboxes += `<h4 class="checkbox"><input id="${checkbox}" type="checkbox"><label for="${checkbox}">${checkbox}</label></h4>`;
         });
 
-        notesDiv.innerHTML += `<div class="note">
-                        <h3 class="note-title">${note.title}</h3>
-                        <p class="description">${note.description}</p>
-                        <p class="date">${note.date}</p>
-                        ${checkboxes}
-                    </div>`;
+        notesDiv.innerHTML +=`
+                            <div class="note">
+                                <h3 class="note-title">${note.title}</h3>
+                                <p class="description">${note.description}</p>
+                                <p class="date">${note.date}</p>
+                                ${checkboxes}
+                                <div class="manage-button">
+                                <button class"delete-note-button" value"${note.title}">X</button></div>
+                            </div>`;
     });
 };
 
