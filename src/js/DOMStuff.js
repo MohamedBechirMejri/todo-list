@@ -51,7 +51,7 @@ export const addNewNote = (projects) => {
     });
 
     newNote.innerHTML = `<h2>New Note</h2>
-            <input id="new-title" placeholder="Title"/>
+            <input id="new-title" placeholder="Title" autocomplete="off"/>
             <div id="description-div"></div>
             <div id="checkboxes-div"></div>
             <label for="projects">Add To:</label>
