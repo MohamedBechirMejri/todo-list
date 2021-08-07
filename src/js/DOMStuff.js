@@ -18,7 +18,8 @@ export const generateNotes = (notes) => {
         note.checkboxes.forEach((checkbox) => {
             checkboxes += `<h4 class="checkbox"><input id="${checkbox}" type="checkbox"><label for="${checkbox}">${checkbox}</label></h4>`;
         });
-        let formattedDate = formatDate(note.date);
+        let formattedDate;
+        note.date ? (formattedDate = formatDate(note.date)) : (formattedDate = "");
         notesDiv.innerHTML += `
                             <div class="note">
                                 <h3 class="note-title">${note.title}</h3>
@@ -74,7 +75,6 @@ export const formatDate = (date) => {
     let dateTime = date.split("T");
     let yearMonthDay = dateTime[0].split("-");
     let hoursMinutes = dateTime[1];
-    //2118-06-14T00:00
     const days = [
         "Sunday",
         "Monday",
