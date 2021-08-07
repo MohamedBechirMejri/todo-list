@@ -114,7 +114,18 @@ nav {
     justify-content: center;
     align-items: stretch;
 }
-
+.delete-project-button {
+    background-color: var(--clr-light);
+    color: var(--clr-dark);
+    border-color: var(--clr-dark);
+    border-style: solid;
+    border-width: thin;
+    border-radius: 50%;
+    width: 1.5em;
+    height: 1.5em;
+    font-size: small;
+    margin-left: 1em;
+}
 input,
 textarea,
 select {
