@@ -23,6 +23,16 @@ projects.addToProject("test3", test);
 generateProjectsList(projects);
 generateNotes(projects.test);
 
+
+
+
+
+
+
+ *add default project
+ *add delete button
+ *fix checkboxes disappearing when adding new checkbox
+ *change date format
  *save arrays in localStorage
  *on page load see if there are any arrays stored in localStorage and generate them
  * TODO: add ids to notes
