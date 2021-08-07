@@ -40,7 +40,6 @@ export const listenToSaveButton = (newNote) => {
 
         generateNotes(projects.returnProject(project.value));
     });
-
 };
 export const listenToDescriptionButton = () => {
     const descriptionButton = document.getElementById("description-button");
@@ -89,8 +88,20 @@ export const listenToAddProjectButton = () => {
 
     addProjectButton.addEventListener("click", () => {
         projects.addToProject(newProjectInput.value);
-        newProjectInput.value = ''
+        newProjectInput.value = "";
         generateProjectsList(projects);
         listenToProjectTitleButtons(projects);
+    });
+};
+export const listenToNoteDeleteButtons = () => {
+    const noteDeleteButtons = document.querySelectorAll(".delete-note-button");
+    noteDeleteButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            projects.removeFromProject(
+                "Default", // <== just for now
+                button.value
+            );
+            generateNotes(projects["Default"]); // <== Also for now
+        });
     });
 };

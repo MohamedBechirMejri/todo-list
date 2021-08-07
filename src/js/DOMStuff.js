@@ -1,6 +1,7 @@
 import {
     listenToCheckboxButton,
     listenToDescriptionButton,
+    listenToNoteDeleteButtons,
     listenToSaveButton,
     listenToScheduleButton,
 } from "./eventListeners";
@@ -24,9 +25,10 @@ export const generateNotes = (notes) => {
                                 <p class="date">${note.date}</p>
                                 ${checkboxes}
                                 <div class="manage-button">
-                                <button class"delete-note-button" value"${note.title}">X</button></div>
+                                <button class="delete-note-button" value="${note.title}">X</button></div>
                             </div>`;
     });
+    listenToNoteDeleteButtons()
 };
 
 export const generateProjectsList = (projects) => {
