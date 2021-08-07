@@ -179,9 +179,11 @@ main {
     margin-top: 0.25em;
     /* padding-top: 0.25em; */
 }
+
 h2 {
     margin: 1em;
 }
+
 #new-note input {
     height: 2em;
     margin-bottom: 0.5em;
@@ -203,4 +205,28 @@ h2 {
     padding: 0.15em;
     height: 3em;
     width: 7em;
+}
+
+.note {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.checkbox {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.checkbox input {
+    height: 1em;
+    width: 1em;
+    margin: 1em 2em 1em 8em;
+    appearance: inherit;
+}
+
+.checkbox input:active,
+:checked {
+    background-color: #ee6352;
 }
