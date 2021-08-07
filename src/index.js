@@ -1,12 +1,26 @@
 import "./css/style.css";
 
-import { NoteMaker } from "./js/NoteMaker";
-import { projects } from "./js/projects";
-import { generateProjectsList, generateNotes } from "./js/DOMStuff";
-import { listenToAddProjectButton, listenToNewNoteButton } from "./js/eventListeners";
-import { DOMStyling } from "./js/DOMStyling";
-listenToNewNoteButton()
-listenToAddProjectButton()
+import {
+    NoteMaker
+} from "./js/NoteMaker";
+import {
+    projects
+} from "./js/projects";
+import {
+    generateProjectsList,
+    generateNotes
+} from "./js/DOMStuff";
+import {
+    listenToAddProjectButton,
+    listenToNewNoteButton,
+} from "./js/eventListeners";
+import {
+    DOMStyling
+} from "./js/DOMStyling";
+
+generateProjectsList(projects);
+listenToNewNoteButton();
+listenToAddProjectButton();
 /**
 let test = NoteMaker(
   "title",
@@ -29,7 +43,7 @@ generateNotes(projects.test);
 
 
 
- *add default project
+ *
  *add delete button
  *fix checkboxes disappearing when adding new checkbox
  *change date format

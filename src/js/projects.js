@@ -1,4 +1,6 @@
-export const projects = {};
+export const projects = {
+    Default: [],
+};
 
 Object.defineProperty(Object.prototype, "addToProject", {
     value: (project, objToAdd) => {
