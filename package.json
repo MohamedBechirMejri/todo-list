@@ -31,5 +31,8 @@
         "webpack-dashboard": "^3.3.5",
         "webpack-dev-server": "^3.11.2",
         "webpack-merge": "^5.8.0"
+    },
+    "dependencies": {
+        "date-fns": "^2.23.0"
     }
 }
