@@ -1,5 +1,5 @@
 import "./css/style.css";
-import "./js/DOMStyling";
+import { DOMStyling } from "./js/DOMStyling";
 import { projects } from "./js/projects";
 import { generateProjectsList } from "./js/DOMStuff";
 import {
