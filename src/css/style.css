@@ -20,7 +20,7 @@
 
 body {
     width: 100vw;
-/*    background-color: var(--clr-dark);*/
+    /*    background-color: var(--clr-dark);*/
 }
 
 #wrapper {
@@ -38,33 +38,33 @@ header {
     padding: 1.25em;
     position: fixed;
     top: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-h1 {
-    margin-top: -0.25em;
-}
+/*h1 {}*/
 
 #nav-toggle {
     background-color: var(--clr-light);
     border-style: none;
     border-radius: 0.15em;
-    margin-top: 0.65em;
-    padding: 0.75em;
-
-    height: 2em;
-    width: 3em;
+    height: 4em;
+    width: 5em;
 }
 
 .hamburger {
     display: block;
     position: relative;
+    left: 1em;
 }
 
 .hamburger::before,
 .hamburger,
 .hamburger::after {
-    width: 2em;
-    height: 3px;
+    width: 3em;
+    height: 0.225em;
     background: var(--clr-dark);
     transition: transform 500ms var(--cubic-bezier),
         opacity 350ms var(--cubic-bezier);
@@ -127,10 +127,12 @@ select {
     background-color: var(--clr-neutral);
     color: var(--clr-dark);
 }
+
 ::placeholder {
     color: var(--clr-dark);
     opacity: 0.75;
 }
+
 input:active {
     box-shadow: 0 0 0 0.2em var(--clr-dark);
 }
@@ -186,6 +188,7 @@ main {
 
 h2 {
     margin: 1em;
+    color: var(--clr-dark);
 }
 
 #new-note input {
@@ -203,7 +206,8 @@ h2 {
 
 #note-management button {
     background-color: var(--clr-light);
-    border-style: none;
+    border-style: solid;
+    border-color: var(--clr-dark);
     border-radius: 0.5em;
     margin: 0.25em;
     padding: 0.15em;
@@ -259,7 +263,6 @@ h2 {
     margin: 1em 1em 1em 6em;
     appearance: inherit;
 }
-
 
 .checkbox input:active,
 :checked {
