@@ -226,6 +226,7 @@ h2 {
     appearance: inherit;
 }
 
+
 .checkbox input:active,
 :checked {
     background-color: #ee6352;
