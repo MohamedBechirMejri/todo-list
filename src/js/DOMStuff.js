@@ -3,6 +3,7 @@ import {
     listenToDescriptionButton,
     listenToNoteDeleteButtons,
     listenToProjectDeleteButtons,
+    listenToProjectTitleButtons,
     listenToSaveButton,
     listenToScheduleButton,
 } from "./eventListeners";
@@ -40,6 +41,7 @@ export const generateProjectsList = (projects) => {
         navList.innerHTML += `<li class="nav-item"><a href="#" class="nav-link">${project}</a><button class="delete-project-button" value="${project}">X</button></li>`;
     });
     listenToProjectDeleteButtons();
+    listenToProjectTitleButtons()
 };
 
 export const addNewNote = (projects) => {
