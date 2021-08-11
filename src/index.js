@@ -9,7 +9,6 @@ import {
 import { checkLocalStorage } from "./js/localStorage";
 
 checkLocalStorage();
-generateProjectsList(projects);
 listenToNewNoteButton();
 listenToAddProjectButton();
 
