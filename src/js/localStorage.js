@@ -1,5 +1,6 @@
 import localforage from "localforage";
 import {
+    generateNotes,
     generateProjectsList
 } from "./DOMStuff";
 import {
@@ -20,6 +21,7 @@ export const loadFromLocalStorage = () => {
             });
         });
         generateProjectsList(projects);
+        generateNotes(projects[Object.keys(projects)[0]]);
     });
 };
 
