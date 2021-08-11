@@ -13,7 +13,7 @@ listenToNewNoteButton();
 listenToAddProjectButton();
 
 /**
- *save arrays in localStorage
- *on page load see if there are any arrays stored in localStorage and generate them
+ * save notes to projects
+ * ability to remove default project
  * TODO: add ids to notes
  */
