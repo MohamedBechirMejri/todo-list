@@ -14,6 +14,7 @@ listenToAddProjectButton();
 
 /**
  * save notes to projects
- * ability to remove default project
+ * ability to remove default project => generate default project through method not hard coding it
+ *
  * TODO: add ids to notes
  */
