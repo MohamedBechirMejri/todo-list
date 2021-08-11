@@ -1,20 +1,24 @@
+import localforage from "localforage";
+import { generateProjectsList } from "./DOMStuff";
 import {
     projects
 } from "./projects";
 
 export const checkLocalStorage = () => {
-    localStorage.getItem("projects") ?
+    localforage.getItem("projects") ?
         loadFromLocalStorage() :
         saveToLocalStorage();
 };
 
 export const loadFromLocalStorage = () => {
-    let loadedProjects = JSON.parse(localStorage.getItem("projects"));
-    Object.keys(loadedProjects).forEach((project) => {
-        projects[project] = project;
+    localforage.getItem("projects").then((val) => {
+        Object.keys(val).forEach((project) => {
+            projects[project] = project;
+        });
+        generateProjectsList(projects);
     });
 };
 
 export const saveToLocalStorage = () => {
-    localStorage.setItem("projects", JSON.stringify(projects));
+    localforage.setItem("projects", projects);
 };
