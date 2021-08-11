@@ -99,8 +99,7 @@ export const listenToAddProjectButton = () => {
         newProjectInput.value = "";
         generateProjectsList(projects);
         listenToProjectTitleButtons(projects);
-
-        saveToLocalStorage();
+        saveToLocalStorage()
     });
 };
 export const listenToNoteDeleteButtons = () => {
@@ -121,6 +120,7 @@ export const listenToProjectDeleteButtons = () => {
         button.addEventListener("click", () => {
             projects.removeProject(button.value);
             generateProjectsList(projects);
+            saveToLocalStorage()
         });
     });
 };
