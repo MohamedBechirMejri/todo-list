@@ -66,8 +66,6 @@ header {
     width: 3em;
     height: 0.225em;
     background: var(--clr-dark);
-    transition: transform 500ms var(--cubic-bezier),
-        opacity 350ms var(--cubic-bezier);
 }
 
 .hamburger::before,
@@ -75,14 +73,16 @@ header {
     content: "";
     position: absolute;
     left: 0;
+
+    animation: toggleButtonAnim 1s infinite;
 }
 
 .hamburger::before {
-    bottom: 6px;
+    bottom: 0.5em;
 }
 
 .hamburger::after {
-    top: 6px;
+    top: 0.5em;
 }
 
 nav {
@@ -328,4 +328,8 @@ select:hover
     color: var(--clr-dark);
     background-color: var(--clr-light);
     box-shadow: 0 0 0 0.1em var(--clr-dark);
+}
+/* Animations */
+
+@keyframes toggleButtonAnim {
 }
