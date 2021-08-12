@@ -304,3 +304,9 @@ h2 {
     right: -1em;
     top: -1em;
 }
+
+footer {
+    position: absolute;
+    bottom: 1em;
+    width: 100%;
+}
