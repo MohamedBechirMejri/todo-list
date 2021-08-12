@@ -85,15 +85,13 @@ header {
     top: 6px;
 }
 
-#gap {
-    height: 6.5em;
-}
-
 nav {
     background-color: var(--clr-light);
     color: var(--clr-dark);
     width: 100%;
     padding: 1em;
+    margin-top: -8em;
+    z-index: -500000000000;
 }
 
 #nav-list {
