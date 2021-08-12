@@ -310,3 +310,10 @@ footer {
     bottom: 1em;
     width: 100%;
 }
+footer a {
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    text-decoration: none;
+    padding: 0.15em;
+    border-radius: 0.25em;
+}
