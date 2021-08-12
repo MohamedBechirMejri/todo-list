@@ -90,13 +90,21 @@ nav {
     color: var(--clr-dark);
     width: 100%;
     padding: 1em;
-    margin-top: -8em;
+    margin-top: 5em;
     z-index: -500000000000;
+}
+
+.hide-nav {
+    margin-top: -5em;
 }
 
 #nav-list {
     list-style: none;
     margin: 1em;
+}
+
+.hidden {
+    display: none;
 }
 
 .nav-item {
