@@ -104,7 +104,7 @@ nav {
 }
 
 .hidden {
-    display: none;
+    height: 0!important;
 }
 
 .nav-item {
