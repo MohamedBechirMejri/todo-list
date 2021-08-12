@@ -1,3 +1,5 @@
+import { saveToLocalStorage } from "./localStorage";
+
 export const projects = {
     Default: [],
 };
@@ -8,6 +10,7 @@ Object.defineProperty(Object.prototype, "addToProject", {
             projects[project] = [];
         }
         projects[project].push(objToAdd);
+        saveToLocalStorage()
     },
     enumerable: false,
 });
@@ -24,6 +27,7 @@ Object.defineProperty(Object.prototype, "removeFromProject", {
         projects[project] = projects[project].filter((obj) => {
             return titleOfObjToRemove !== obj.title;
         });
+        saveToLocalStorage()
     },
     enumerable: false,
 });
@@ -31,6 +35,7 @@ Object.defineProperty(Object.prototype, "removeFromProject", {
 Object.defineProperty(Object.prototype, "removeProject", {
     value: (project) => {
         delete projects[project];
+        saveToLocalStorage()
     },
     enumerable: false,
 });
