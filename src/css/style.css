@@ -319,7 +319,9 @@ footer a {
     border-radius: 0.25em;
 }
 
-footer a:hover {
+footer a:hover,
+button:hover
+ {
     color: var(--clr-dark);
     background-color: var(--clr-light);
     box-shadow: 0 0 0 0.1em var(--clr-dark);
