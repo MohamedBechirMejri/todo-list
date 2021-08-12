@@ -320,7 +320,8 @@ footer a {
 }
 
 footer a:hover,
-button:hover
+button:hover,
+input:hover
  {
     color: var(--clr-dark);
     background-color: var(--clr-light);
