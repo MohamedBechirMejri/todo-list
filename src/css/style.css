@@ -54,6 +54,10 @@ header {
     width: 5em;
 }
 
+#nav-toggle:hover {
+    transform: rotate(90deg);
+}
+
 .hamburger {
     display: block;
     position: relative;
@@ -73,16 +77,16 @@ header {
     content: "";
     position: absolute;
     left: 0;
-
-    animation: toggleButtonAnim 1s infinite;
 }
 
 .hamburger::before {
     bottom: 0.5em;
+    margin-bottom: 0.25em;
 }
 
 .hamburger::after {
     top: 0.5em;
+    margin-top: 0.25em;
 }
 
 nav {
@@ -91,7 +95,6 @@ nav {
     width: 100%;
     padding: 1em;
     margin-top: 5em;
-
 }
 
 .hide-nav {
@@ -104,7 +107,7 @@ nav {
 }
 
 .hidden {
-    height: 0!important;
+    height: 0 !important;
 }
 
 .nav-item {
@@ -323,13 +326,8 @@ footer a:hover,
 button:hover,
 input:hover,
 textarea:hover,
-select:hover
- {
+select:hover {
     color: var(--clr-dark);
     background-color: var(--clr-light);
     box-shadow: 0 0 0 0.1em var(--clr-dark);
-}
-/* Animations */
-
-@keyframes toggleButtonAnim {
 }
