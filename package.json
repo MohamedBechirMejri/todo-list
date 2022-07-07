@@ -15,7 +15,7 @@
     "license": "ISC",
     "bugs": {
         "url": "https://github.com/MohamedBechirMejri/todo-list/issues"
-    },
+    }, 
     "homepage": "https://github.com/MohamedBechirMejri/todo-list#readme",
     "devDependencies": {
         "clean-webpack-plugin": "^4.0.0-alpha.0",
